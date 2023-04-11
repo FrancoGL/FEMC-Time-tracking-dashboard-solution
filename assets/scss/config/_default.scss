@@ -1,0 +1,8 @@
+@use "../utils/colors" as color;
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: color.$Very-dark-blue;
+  color: color.$White;
+}
