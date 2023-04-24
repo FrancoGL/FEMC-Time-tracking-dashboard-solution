@@ -1,0 +1,52 @@
+@use "../utils/colors" as color;
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.card {
+  margin: 1rem 0;
+  width: 90%;
+  background-color: color.$Dark-blue;
+  border-radius: 1rem;
+}
+
+.card-main {
+  
+  .header {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: color.$Blue;
+    border-radius: 1rem;
+    .profile-picture {
+      display: block;
+      width: 70px;
+      height: 70px;
+    }
+    .profile-title {
+      margin: 0;
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: 400;
+      .size-style {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .body {
+    padding: 1rem 1.5rem;
+    .body-list {
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+    }
+  }
+}
