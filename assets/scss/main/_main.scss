@@ -33,7 +33,6 @@ main {
     align-items: center;
     justify-content: space-between;
     border-radius: 1rem;
-
     .left__content {
       .title {
         margin: 0;
@@ -77,4 +76,41 @@ main {
       list-style-type: none;
     }
   }
+}
+
+.card-work, .card-play,
+.card-study, .card-exercise,
+.card-social, .card-self-care {
+  .header {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  .body {
+    background-color: color.$Dark-blue;
+    border-radius: 1rem;
+  }
+}
+
+.card-work {
+  background-color: color.$Light-red-work;
+}
+
+.card-play {
+  background-color: color.$Soft-blue-play;
+}
+
+.card-study {
+  background-color: color.$Light-red-study;
+}
+
+.card-exercise {
+  background-color: color.$Lime-green-exercise;
+}
+
+.card-social {
+  background-color: color.$Violet-social;
+}
+
+.card-self-care {
+  background-color: color.$Soft-orange-self-care;
 }
