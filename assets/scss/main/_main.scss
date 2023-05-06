@@ -1,0 +1,116 @@
+@use "../utils/colors" as color;
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.card {
+  margin: 1rem 0;
+  width: 90%;
+  background-color: color.$Dark-blue;
+  border-radius: 1rem;
+
+  .header {
+    height: 3.125rem;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    .icon-activity {
+      position: relative;
+      width: 6.25rem;
+      height: 6.25rem;
+      bottom: 0.7rem;
+    }
+  }
+
+  .body {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+    .left__content {
+      .title {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.card-main {
+  
+  .header {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: color.$Blue;
+    border-radius: 1rem;
+    .profile-picture {
+      display: block;
+      width: 70px;
+      height: 70px;
+    }
+    .profile-title {
+      margin: 0;
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: 400;
+      .size-style {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .body {
+    padding: 1rem 1.5rem;
+    .body-list {
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+    }
+  }
+}
+
+.card-work, .card-play,
+.card-study, .card-exercise,
+.card-social, .card-self-care {
+  .header {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  .body {
+    background-color: color.$Dark-blue;
+    border-radius: 1rem;
+  }
+}
+
+.card-work {
+  background-color: color.$Light-red-work;
+}
+
+.card-play {
+  background-color: color.$Soft-blue-play;
+}
+
+.card-study {
+  background-color: color.$Light-red-study;
+}
+
+.card-exercise {
+  background-color: color.$Lime-green-exercise;
+}
+
+.card-social {
+  background-color: color.$Violet-social;
+}
+
+.card-self-care {
+  background-color: color.$Soft-orange-self-care;
+}
