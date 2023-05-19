@@ -56,6 +56,7 @@ main {
 
       p {
         margin: 0;
+        color: color.$Pale-Blue;
       }
     }
   }
@@ -89,10 +90,12 @@ main {
   .body {
     padding: 1rem 1.5rem;
     .body-list {
+      width: 100%;
       padding: 0;
       display: flex;
       justify-content: space-between;
       list-style-type: none;
+      color: color.$Pale-Blue;
     }
   }
 }
