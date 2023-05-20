@@ -1,0 +1,56 @@
+@use "../utils/colors" as color;
+
+.card {
+  margin: 1rem 0;
+  width: 21.094rem;
+  background-color: color.$Dark-blue;
+  border-radius: 1rem;
+
+  .header {
+    height: 3.125rem;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    .icon-activity {
+      position: relative;
+      width: 6.25rem;
+      height: 6.25rem;
+      bottom: 0.7rem;
+    }
+  }
+
+  .body {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+    .left__content {
+      .title {
+        margin: 0 0 1rem 0;
+        font-size: 1rem;
+      }
+      .hours {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 300;
+      }
+    }
+    .right__content {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-end;
+
+      img {
+        display: block;
+        margin: 0 0 1.5rem 0;
+      }
+
+      p {
+        margin: 0;
+        color: color.$Pale-Blue;
+      }
+    }
+  }
+}

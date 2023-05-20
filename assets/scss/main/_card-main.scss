@@ -1,0 +1,39 @@
+@use "../utils/colors" as color;
+
+.card-main {
+  .header {
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: color.$Blue;
+    border-radius: 1rem;
+    .profile-picture {
+      display: block;
+      width: 70px;
+      height: 70px;
+    }
+    .profile-title {
+      margin: 0;
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: 400;
+      .size-style {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .body {
+    padding: 1rem 1.5rem;
+    .body-list {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      color: color.$Pale-Blue;
+    }
+  }
+}
