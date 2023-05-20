@@ -64,10 +64,10 @@ main {
 
 .card-main {
   .header {
-    padding: 1.5rem;
+    padding: 4rem 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: color.$Blue;
     border-radius: 1rem;
     .profile-picture {
@@ -138,4 +138,12 @@ main {
 
 .card-self-care {
   background-color: color.$Soft-orange-self-care;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-rows: max-content;
+  }
 }
