@@ -54,3 +54,27 @@
     }
   }
 }
+
+
+@media screen and (min-width: 768px) {
+  .card {
+    margin: 0;
+    display: block;
+    width: auto;
+    height: 100%;
+    .header {
+      padding: 0;
+      height: 20%;
+      .icon-activity {
+        width: 4rem;
+        height: 4rem;
+        right: 1rem;
+      }
+    }
+    .body {
+      display: block;
+      height: 80%;
+      padding: 1rem;
+    }
+  }
+}

@@ -39,3 +39,35 @@
 .card-self-care {
   background-color: color.$Soft-orange-self-care;
 }
+
+@media screen and (min-width: 768px) {
+  .card-work {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .card-play {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .card-study {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+  }
+
+  .card-exercise {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .card-social {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .card-self-care {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+  }
+}
