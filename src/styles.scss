@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./styles/global/colors" as color;
+
+html {
+  font-family: 'Rubik', sans-serif;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: color.$Very-dark-blue;
+  color: color.$White;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
