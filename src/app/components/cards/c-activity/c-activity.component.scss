@@ -1,0 +1,80 @@
+@use "/src/styles/global/colors" as color;
+
+.c-activity {
+  border-radius: 1rem;
+  margin: 1rem 0;
+  width: 21rem;
+
+  .header {
+    height: 2rem;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+    }
+  }
+
+  .body {
+    background-color: color.$Dark-blue;
+    padding: 1rem 2rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+
+    h2, p {
+      display: inline-block;
+      margin: 0;
+    }
+
+    .top-content {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+
+      h2 {
+        font-size: 1.125rem;
+      }
+
+      img {
+        align-self: center;
+        height: 5px;
+        width: 21px;
+      }
+    }
+
+    .bottom-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .hours {
+        font-size: 2rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.work {
+  background-color: color.$Light-red-work;
+}
+
+.play {
+  background-color: color.$Soft-blue-play;
+}
+
+.study {
+  background-color: color.$Light-red-study;
+}
+
+.exercise {
+  background-color: color.$Lime-green-exercise;
+}
+
+.social {
+  background-color: color.$Violet-social;
+}
+
+.self-care {
+  background-color: color.$Soft-orange-self-care;
+}

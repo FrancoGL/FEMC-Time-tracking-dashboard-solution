@@ -20,7 +20,6 @@ export class CActivityComponent implements OnInit, OnDestroy{
   ngOnInit() {
     this.subscription = this.activityService.getAll().subscribe((res) => {
       this.activities = res
-      console.log(res)
     })
   }
 
