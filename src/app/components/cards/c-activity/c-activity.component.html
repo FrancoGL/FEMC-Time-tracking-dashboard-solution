@@ -1,4 +1,7 @@
-<div *ngFor="let activity of activities" class="c-activity">
+<div *ngFor="let activity of activities" class="c-activity"
+     [ngClass]="{'work': activity.title === 'Work', 'play': activity.title === 'Play',
+     'study': activity.title === 'Study', 'exercise': activity.title === 'Exercise',
+     'social': activity.title === 'Social', 'self-care': activity.title === 'Self Care'}">
   <div class="header">
     <img *ngIf="activity.title === 'Work'" src="/assets/icons/icon-work.svg" alt="activity icon">
     <img *ngIf="activity.title === 'Play'" src="/assets/icons/icon-play.svg" alt="activity icon">
@@ -9,11 +12,11 @@
   </div>
   <div class="body">
     <div class="top-content">
-      <h1>{{activity.title}}</h1>
+      <h2>{{activity.title}}</h2>
       <img src="/assets/icons/icon-ellipsis.svg" alt="ellipsis icon">
     </div>
     <div *ngIf="currentTimeFrame.includes('Daily')" class="bottom-content">
-      <p>{{activity.timeframes.daily.current}}hrs</p>
+      <p class="hours">{{activity.timeframes.daily.current}}hrs</p>
       <p>Last day - {{activity.timeframes.daily.previous}}hrs</p>
     </div>
   </div>
