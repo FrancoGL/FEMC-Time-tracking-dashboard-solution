@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {ActivityService} from "../../../common/services/activity.service";
 import {Subscription} from "rxjs";
 
@@ -11,8 +11,6 @@ export class CActivityComponent implements OnInit, OnDestroy{
 
   subscription!: Subscription;
   activities!: any;
-  currentTimeFrame: string = 'Daily'
-  timeFrameData: any;
 
   constructor(private activityService: ActivityService) {
   }
@@ -20,10 +18,14 @@ export class CActivityComponent implements OnInit, OnDestroy{
   ngOnInit() {
     this.subscription = this.activityService.getAll().subscribe((res) => {
       this.activities = res
-    })
+    });
   }
 
   ngOnDestroy() {
     this.subscription?.unsubscribe();
+  }
+
+  get getCurrentTime() {
+    return this.activityService.currentTimeFrame
   }
 }

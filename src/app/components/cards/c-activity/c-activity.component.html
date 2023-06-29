@@ -15,9 +15,17 @@
       <h2>{{activity.title}}</h2>
       <img src="/assets/icons/icon-ellipsis.svg" alt="ellipsis icon">
     </div>
-    <div *ngIf="currentTimeFrame.includes('Daily')" class="bottom-content">
+    <div *ngIf="getCurrentTime.includes('Daily')" class="bottom-content">
       <p class="hours">{{activity.timeframes.daily.current}}hrs</p>
       <p>Last day - {{activity.timeframes.daily.previous}}hrs</p>
+    </div>
+    <div *ngIf="getCurrentTime.includes('Weekly')" class="bottom-content">
+      <p class="hours">{{activity.timeframes.weekly.current}}hrs</p>
+      <p>Last week - {{activity.timeframes.weekly.previous}}hrs</p>
+    </div>
+    <div *ngIf="getCurrentTime.includes('Monthly')" class="bottom-content">
+      <p class="hours">{{activity.timeframes.monthly.current}}hrs</p>
+      <p>Last month - {{activity.timeframes.monthly.previous}}hrs</p>
     </div>
   </div>
 </div>
