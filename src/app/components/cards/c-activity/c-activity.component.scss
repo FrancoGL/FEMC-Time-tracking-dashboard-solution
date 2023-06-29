@@ -6,20 +6,24 @@
   width: 21rem;
 
   .header {
-    height: 2rem;
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    height: 2.5rem;
     overflow: hidden;
 
     img {
-      position: absolute;
+      margin: 0 1rem 0 0;
+      width: 6.25rem;
+      height: 6.25rem;
+      position: relative;
+      bottom: 0.7rem;
     }
   }
 
   .body {
     background-color: color.$Dark-blue;
-    padding: 1rem 2rem;
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
 
     h2, p {
       display: inline-block;
