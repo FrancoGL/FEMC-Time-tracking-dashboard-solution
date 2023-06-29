@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Output} from '@angular/core';
+import {ActivityService} from "../../../common/services/activity.service";
 
 @Component({
   selector: 'app-c-profile',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class CProfileComponent {
 
+  constructor(private activityService: ActivityService) {
+  }
+
+  changeTimeFrame(timeFrame: string) {
+    this.activityService.changeCurrentTimeFrame(timeFrame)
+  }
 }
