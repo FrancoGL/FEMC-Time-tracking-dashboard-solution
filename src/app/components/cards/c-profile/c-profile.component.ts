@@ -14,4 +14,8 @@ export class CProfileComponent {
   changeTimeFrame(timeFrame: string) {
     this.activityService.changeCurrentTimeFrame(timeFrame)
   }
+
+  get getCurrentTime() {
+    return this.activityService.currentTimeFrame
+  }
 }
