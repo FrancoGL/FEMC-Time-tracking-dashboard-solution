@@ -1,0 +1,10 @@
+@media screen and (min-width: 768px) {
+  main {
+    padding: 1rem;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 11.298rem auto;
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+  }
+}
