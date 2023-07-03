@@ -87,7 +87,7 @@
 
   .container {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 10.656rem);
     grid-template-rows: repeat(2, auto);
     gap: 1rem;
     height: 100%;
@@ -164,5 +164,21 @@
   .self-care {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 11.323rem);
+  }
+
+  .c-activity {
+    .body {
+      .bottom-content {
+        .last {
+          font-size: 1rem;
+        }
+      }
+    }
   }
 }
