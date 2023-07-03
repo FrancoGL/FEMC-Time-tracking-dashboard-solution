@@ -8,3 +8,9 @@
     gap: 1rem;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  main {
+    width: 50rem;
+  }
+}
