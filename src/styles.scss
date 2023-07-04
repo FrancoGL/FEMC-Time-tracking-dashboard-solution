@@ -16,3 +16,10 @@ body {
   flex-flow: column nowrap;
   align-items: center;
 }
+
+footer {
+  text-align: center;
+  a {
+    color: color.$Pale-Blue;
+  }
+}
