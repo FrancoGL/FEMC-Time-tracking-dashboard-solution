@@ -3,13 +3,13 @@
        [ngClass]="{'work': activity.title === 'Work', 'play': activity.title === 'Play',
      'study': activity.title === 'Study', 'exercise': activity.title === 'Exercise',
      'social': activity.title === 'Social', 'self-care': activity.title === 'Self Care'}">
-    <div class="header">
-      <img *ngIf="activity.title === 'Work'" src="/assets/icons/icon-work.svg" alt="activity icon">
-      <img *ngIf="activity.title === 'Play'" src="/assets/icons/icon-play.svg" alt="activity icon">
-      <img *ngIf="activity.title === 'Study'" src="/assets/icons/icon-study.svg" alt="activity icon">
-      <img *ngIf="activity.title === 'Exercise'" src="/assets/icons/icon-exercise.svg" alt="activity icon">
-      <img *ngIf="activity.title === 'Social'" src="/assets/icons/icon-social.svg" alt="activity icon">
-      <img *ngIf="activity.title === 'Self Care'" src="/assets/icons/icon-self-care.svg" alt="activity icon">
+    <div class="header" [ngSwitch]="activity.title">
+      <img *ngSwitchCase="'Work'" src="/assets/icons/icon-work.svg" alt="activity icon">
+      <img *ngSwitchCase="'Play'" src="/assets/icons/icon-play.svg" alt="activity icon">
+      <img *ngSwitchCase="'Study'" src="/assets/icons/icon-study.svg" alt="activity icon">
+      <img *ngSwitchCase="'Exercise'" src="/assets/icons/icon-exercise.svg" alt="activity icon">
+      <img *ngSwitchCase="'Social'" src="/assets/icons/icon-social.svg" alt="activity icon">
+      <img *ngSwitchCase="'Self Care'" src="/assets/icons/icon-self-care.svg" alt="activity icon">
     </div>
     <div class="body">
       <div class="top-content">
