@@ -99,6 +99,9 @@
       ul {
         li {
           cursor: pointer;
+          &:hover {
+            color: color.$White;
+          }
         }
       }
     }
