@@ -1,0 +1,25 @@
+@use "./styles/global/colors" as color;
+
+html {
+  font-family: 'Rubik', sans-serif;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: color.$Very-dark-blue;
+  color: color.$White;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  a {
+    color: color.$Pale-Blue;
+  }
+}

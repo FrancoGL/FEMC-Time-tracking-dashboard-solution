@@ -1,0 +1,17 @@
+@media screen and (min-width: 768px) {
+  main {
+    padding: 1rem;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 11.298rem auto;
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    width: 55rem;
+    grid-template-columns: 12.5rem auto;
+  }
+}

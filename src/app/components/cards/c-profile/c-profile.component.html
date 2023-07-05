@@ -1,0 +1,16 @@
+<div class="c-profile">
+  <div class="header">
+    <img src="./assets/images/image-jeremy.png" alt="profile picture">
+    <div class="content">
+      <p>Report for</p>
+      <h1>Jeremy Robson</h1>
+    </div>
+  </div>
+  <div class="body">
+    <ul>
+      <li (click)="changeTimeFrame('Daily')" [ngClass]="{'active': getCurrentTime.includes('Daily')}">Daily</li>
+      <li (click)="changeTimeFrame('Weekly')" [ngClass]="{'active': getCurrentTime.includes('Weekly')}">Weekly</li>
+      <li (click)="changeTimeFrame('Monthly')" [ngClass]="{'active': getCurrentTime.includes('Monthly')}">Monthly</li>
+    </ul>
+  </div>
+</div>

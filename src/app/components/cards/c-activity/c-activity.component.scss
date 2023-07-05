@@ -1,0 +1,197 @@
+@use "/src/styles/global/colors" as color;
+
+.c-activity {
+  border-radius: 1rem;
+  margin: 1rem 0;
+  width: 21rem;
+
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    height: 2.5rem;
+    overflow: hidden;
+
+    img {
+      margin: 0 1rem 0 0;
+      width: 6.25rem;
+      height: 6.25rem;
+      position: relative;
+      bottom: 0.7rem;
+    }
+  }
+
+  .body {
+    background-color: color.$Dark-blue;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    h2, p {
+      display: inline-block;
+      margin: 0;
+    }
+
+    .top-content {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+
+      h2 {
+        font-size: 1.125rem;
+      }
+
+      img {
+        align-self: center;
+        height: 5px;
+        width: 21px;
+      }
+    }
+
+    .bottom-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .hours {
+        font-size: 2rem;
+        font-weight: 300;
+      }
+
+      .last {
+        color: color.$Pale-Blue;
+      }
+    }
+  }
+}
+
+.work {
+  background-color: color.$Light-red-work;
+}
+
+.play {
+  background-color: color.$Soft-blue-play;
+}
+
+.study {
+  background-color: color.$Light-red-study;
+}
+
+.exercise {
+  background-color: color.$Lime-green-exercise;
+}
+
+.social {
+  background-color: color.$Violet-social;
+}
+
+.self-care {
+  background-color: color.$Soft-orange-self-care;
+}
+
+@media screen and (min-width: 768px) {
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    height: 100%;
+  }
+
+  .c-activity {
+    width: 100%;
+    margin: 0;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    .header {
+      height: 20%;
+
+      img {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+
+    .body {
+      height: 80%;
+      padding: 1rem;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-evenly;
+
+      .top-content {
+        h2 {
+          font-size: 1rem;
+        }
+      }
+
+      .bottom-content {
+        flex-flow: column nowrap;
+        align-items: start;
+
+        .hours {
+          font-size: 2.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .last {
+          font-size: 0.7rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .work {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .play {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .study {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .exercise {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .social {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .self-care {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 13.5rem);
+  }
+
+  .c-activity {
+    .header {
+      img {
+        cursor: pointer;
+      }
+    }
+    .body {
+      padding: 1.5rem;
+      &:hover {
+        filter: brightness(2);
+        h2 {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

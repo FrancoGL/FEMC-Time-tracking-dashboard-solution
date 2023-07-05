@@ -1,0 +1,33 @@
+<div class="container">
+  <div *ngFor="let activity of activities" class="c-activity"
+       [ngClass]="{'work': activity.title === 'Work', 'play': activity.title === 'Play',
+     'study': activity.title === 'Study', 'exercise': activity.title === 'Exercise',
+     'social': activity.title === 'Social', 'self-care': activity.title === 'Self Care'}">
+    <div class="header" [ngSwitch]="activity.title">
+      <img *ngSwitchCase="'Work'" src="/assets/icons/icon-work.svg" alt="activity icon">
+      <img *ngSwitchCase="'Play'" src="/assets/icons/icon-play.svg" alt="activity icon">
+      <img *ngSwitchCase="'Study'" src="/assets/icons/icon-study.svg" alt="activity icon">
+      <img *ngSwitchCase="'Exercise'" src="/assets/icons/icon-exercise.svg" alt="activity icon">
+      <img *ngSwitchCase="'Social'" src="/assets/icons/icon-social.svg" alt="activity icon">
+      <img *ngSwitchCase="'Self Care'" src="/assets/icons/icon-self-care.svg" alt="activity icon">
+    </div>
+    <div class="body">
+      <div class="top-content">
+        <h2>{{activity.title}}</h2>
+        <img src="/assets/icons/icon-ellipsis.svg" alt="ellipsis icon">
+      </div>
+      <div *ngIf="getCurrentTime.includes('Daily')" class="bottom-content">
+        <p class="hours">{{activity.timeframes.daily.current}}hrs</p>
+        <p class="last">Last day - {{activity.timeframes.daily.previous}}hrs</p>
+      </div>
+      <div *ngIf="getCurrentTime.includes('Weekly')" class="bottom-content">
+        <p class="hours">{{activity.timeframes.weekly.current}}hrs</p>
+        <p class="last">Last week - {{activity.timeframes.weekly.previous}}hrs</p>
+      </div>
+      <div *ngIf="getCurrentTime.includes('Monthly')" class="bottom-content">
+        <p class="hours">{{activity.timeframes.monthly.current}}hrs</p>
+        <p class="last">Last month - {{activity.timeframes.monthly.previous}}hrs</p>
+      </div>
+    </div>
+  </div>
+</div>
