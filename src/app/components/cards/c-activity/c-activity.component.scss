@@ -179,8 +179,20 @@
   }
 
   .c-activity {
+    .header {
+      img {
+        z-index: 99;
+        cursor: pointer;
+      }
+    }
     .body {
       padding: 1.5rem;
+      &:hover {
+        filter: brightness(2);
+        h2 {
+          font-weight: 400;
+        }
+      }
     }
   }
 }
