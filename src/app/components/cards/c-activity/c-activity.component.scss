@@ -13,8 +13,8 @@
 
     img {
       margin: 0 1rem 0 0;
-      width: 6.25rem;
-      height: 6.25rem;
+      width: 5.25rem;
+      height: 5.25rem;
       position: relative;
       bottom: 0.7rem;
     }
@@ -37,6 +37,7 @@
 
       h2 {
         font-size: 1.125rem;
+        font-weight: 400;
       }
 
       img {
@@ -135,7 +136,7 @@
         }
 
         .last {
-          font-size: 0.7rem;
+          font-size: 0.9rem;
           font-weight: 300;
         }
       }
@@ -188,9 +189,6 @@
       padding: 1.5rem;
       &:hover {
         filter: brightness(2);
-        h2 {
-          font-weight: 400;
-        }
       }
     }
   }
