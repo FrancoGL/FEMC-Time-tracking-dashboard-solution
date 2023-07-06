@@ -10,11 +10,13 @@ html {
 }
 
 body {
+  height: 100vh;
   background-color: color.$Very-dark-blue;
   color: color.$White;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: center;
 }
 
 footer {
