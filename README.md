@@ -30,7 +30,7 @@ Users should be able to:
 ### Built with
 
 - Angular 16
-- SASS/SCSS
+- SASS-SCSS
 - Mobile-first workflow
 
 ## Author
