@@ -24,13 +24,13 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](#)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/time-tracking-dashboard-angular-GXugyctt5g)
 - Live Site URL: [Live site with Vercel](https://femc-time-tracking-dashboard-solution.vercel.app)
 
 ### Built with
 
 - Angular 16
-- SASS
+- SASS/SCSS
 - Mobile-first workflow
 
 ## Author
